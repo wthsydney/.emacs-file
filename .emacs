@@ -12,12 +12,16 @@
 (setq backup-directory-alist `(("." . "~/.saves")))
 ;;(set-frame-font "Fira Code 12" nil t)
 ;;(set-frame-font "Cascadia Code 11" nil t)
-(set-frame-font "0xProto Regular 11" nil t)
+;;(set-frame-font "0xProto Regular 11" nil t)
 ;;(set-frame-font "ProFontWindows 11" nil t)
-;;(set-frame-font "Consolas 13" nil t)
+;;(set-frame-font "Consolas 11" nil t)
+;;(set-frame-font "Terminus 11" nil t)
 ;;(set-frame-font "Liberation Mono Regular 11" nil t)
+(set-frame-font "JetBrains Mono Regular 11" nil t)
 (global-auto-revert-mode t)
-(load-theme 'tron-legacy t)
+(load-theme 'gruber-torch t)
+(setq-default cursor-type 'box)
+(blink-cursor-mode 0)
 
 ;;Disable warnings
 (setq warning-minimum-level :emergency)
@@ -37,6 +41,7 @@ With argument ARG, do this that many times."
 (global-set-key (kbd "C-b") 'backward-word)
 (global-set-key (kbd "C-q") 'query-replace)
 (global-set-key (kbd "C-o") 'find-file)
+
 (global-set-key (kbd "<f5>") 'save-buffer)
 (global-set-key (kbd "<f6>") 'compile)
 (setq compile-command "build.bat")
